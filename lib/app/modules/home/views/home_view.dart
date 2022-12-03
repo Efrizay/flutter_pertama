@@ -19,7 +19,7 @@ class HomeView extends GetView<HomeController> {
     return Scaffold(
       
  key: _drawerKey,
-      drawer: const SideBar(),
+      drawer: const SizedBox(width: 150, child: SideBar()),,
       backgroundColor: AppColors.primaryBg,
 
        body: SafeArea(

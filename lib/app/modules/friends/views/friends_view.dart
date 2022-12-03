@@ -19,61 +19,56 @@ class AboutView extends GetView<AboutController> {
     return Scaffold(
       
            key: _drawerKey,
-      drawer: const SideBar(),
+      drawer: const SizedBox(width: 150, child: SideBar()),
       backgroundColor: AppColors.primaryBg,
-      body: Row(
-        children: [
-      !context.isPhone 
-      ? const Expanded(
-          flex: 2,
-          child:  SideBar(), 
-        )
-        : const  SizedBox(),
-      Expanded(
-        flex: 15,
-        child: Column(children: [
-          !context.isPhone 
-          ? const header()
-          : Container(
-            // content / isi page / screen
-            padding: EdgeInsets.all(20),
-            child: Row(
-              children: [
-                IconButton(
-                  onPressed: () {
-                    _drawerKey.currentState!.openDrawer();
-                  }, 
-                  icon: const Icon(
-                    Icons.menu, 
-                    color: AppColors.primaryText ,
-          ),
-          ),
+      
+      body: SafeArea(
+        child: Row(
+          children: [
+        !context.isPhone 
+        ? const Expanded(
+            flex: 2,
+            child:  SideBar(), 
+          )
+          : const  SizedBox(),
+        Expanded(
+          flex: 15,
+          child: Column(children: [
+            !context.isPhone 
+            ? const header()
+            : Container(
+              // content / isi page / screen
+              padding: EdgeInsets.all(20),
+              child: Row(
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      _drawerKey.currentState!.openDrawer();
+                    }, 
+                    icon: const Icon(
+                      Icons.menu, 
+                      color: AppColors.primaryText ,
+            ),
+
+            ),
           const SizedBox(
-              width: 15,
-            ),
-          Column(
-         // mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            Text(
-              'Task Management',
-              style: TextStyle(
-                fontSize: 20, color: AppColors.primaryText),
-              ),
-            Text(
-              'Manage Task Made Easy with Friends',
-                style: TextStyle(
-                  fontSize: 13, color: AppColors.primaryText),
-                ),
-          ],
+                width: 15,
           ),
-          const Spacer(),
-          const Icon (
-            Ionicons.notifications, 
-                color: AppColors.primaryText,
-            ),
-            const SizedBox(
-              width: 15,
+            Column(
+           // mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              Text(
+                'Task Management',
+                style: TextStyle(
+                  fontSize: 20, color: AppColors.primaryText),
+                ),
+           Text(
+                'Manage Task Made Easy with Friends',
+                  style: TextStyle(
+                    fontSize: 13, color: AppColors.primaryText),
+                  ),
+            ],
             ),
             ClipRRect(borderRadius: BorderRadius.circular(30),
             child: const CircleAvatar(
@@ -128,7 +123,7 @@ class AboutView extends GetView<AboutController> {
                               bottom: 10,
                               left: 50,
                               child: Text(
-                                'Alicia Jasmine', 
+                                'Udin', 
                                 style: TextStyle(color: Colors.white),
                                 ),
                                 ),
