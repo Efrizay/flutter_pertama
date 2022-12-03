@@ -104,7 +104,7 @@ class TaskView extends GetView<TaskController> {final GlobalKey<ScaffoldState> _
                                               height: 20,
                                             ),
                                      Expanded(
-                      child: ListView.builder(
+                      child: ListView.builder(  
                         itemCount: 8,
                         clipBehavior: Clip.antiAlias,
                     shrinkWrap: true,

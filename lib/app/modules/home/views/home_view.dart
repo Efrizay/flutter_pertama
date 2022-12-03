@@ -96,7 +96,9 @@ class HomeView extends GetView<HomeController> {
                               fontSize: 30,
                                      ),
                                      ),
-                                          SizedBox(),
+                                          SizedBox(
+                                            height: 20,
+                                          ),
               //mystask
               myTask(),
 
