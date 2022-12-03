@@ -6,17 +6,18 @@ import 'package:tas_management_app/app/utils/widget/header.dart';
 import 'package:tas_management_app/app/utils/widget/sideBar.dart';
 import 'package:tas_management_app/app/utils/widget/style/AppColors.dart';
 
-import '../controllers/profile_controller.dart';
 
-class ProfileView extends GetView<ProfileController> {
+import '../controllers/about_controller.dart';
+
+class AboutView extends GetView<AboutController> {
 
   final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     
-   key: _drawerKey,
+      
+           key: _drawerKey,
       drawer: const SideBar(),
       backgroundColor: AppColors.primaryBg,
       body: Row(
@@ -101,9 +102,7 @@ class ProfileView extends GetView<ProfileController> {
         ]),
       )
         ],
-
-        ),
       ),
-    ;
+    
   }
 }

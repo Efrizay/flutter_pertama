@@ -21,21 +21,32 @@ class AppPages {
       name: _Paths.HOME,
       page: () => HomeView(),
       binding: HomeBinding(),
+      transition: Transition.upToDown,
+      // transitionDuration: Duration(seconds: 2),
+    ),
+     GetPage(
+      name: _Paths.LOGIN,
+      page: () => LoginView(),
+      page: () => LoginView(),
+      binding: LoginBinding(),
+    ),
+    GetPage(
+      name: _Paths.TASK,
+      page: () => TaskView(),
+      page: () => TaskView(),
+      binding: TaskBinding(),
+    ),
+    GetPage(
+      name: _Paths.FRIENDS,
+      page: () => FriendsView(),
+      page: () => FriendsView(),
+      binding: FriendsBinding(),
     ),
     GetPage(
       name: _Paths.PROFILE,
-      page: () => const ProfileView(),
+      page: () => ProfileView(),
       binding: ProfileBinding(),
     ),
-    GetPage(
-      name: _Paths.ABOUT,
-      page: () => const AboutView(),
-      binding: AboutBinding(),
-    ),
-    GetPage(
-      name: _Paths.VIEW,
-      page: () => const ViewView(),
-      binding: ViewBinding(),
-    ),
+   
   ];
 }
