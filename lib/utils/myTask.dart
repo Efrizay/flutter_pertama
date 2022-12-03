@@ -17,13 +17,7 @@ class MyTask extends SideBar{
         clipBehavior: Clip.antiAlias
         scrollDirection: Axis.horizontal,
     shrinkWrap: true,
-    children: [
-      Container(width: 400,decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),
-      color: AppColors.cardBg, ),
-      margin: EdgeInsets.all(10),
-      padding: EdgeInsets.all(20),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+    
         children: [
         Row(
           children:[
