@@ -126,7 +126,7 @@ class ProfileView extends GetView<ProfileController> {
                             fontSize: 30,
                 ),
                 ),
-                  SizedBox(height: 160, child: MyTask()),
+                  SizedBox(height: 180, child: MyTask()),
               ]),
               ),
             ),
